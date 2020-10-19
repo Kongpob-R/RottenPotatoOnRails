@@ -5,6 +5,7 @@ ruby '2.7.1'
 
 gem 'bootstrap'
 gem 'jquery-rails'
+gem 'omniauth-facebook'
 gem 'sprockets-rails', '>= 2.3.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
