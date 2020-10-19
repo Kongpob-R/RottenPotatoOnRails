@@ -1,0 +1,2 @@
+export RAILS_ENV=”production”
+export SECRET_KEY_BASE="9da55d869cdf2e8d182bc1bdffe28be416ac2f1cdf9e83d11dd07712880110f3366fe84facdb790ba477eb26e05e1a0057b0bf58a1c92c90a1839af076481f97"
