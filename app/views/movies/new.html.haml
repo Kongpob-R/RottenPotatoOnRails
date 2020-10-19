@@ -23,5 +23,7 @@
       %div.col-md-4
         = text_area :movie, :description
     %div.row
-      %div.col
-        = submit_tag 'Save Changes'
+      %div.col-md-2
+        = submit_tag 'Save Changes', :class => 'btn btn-success'
+      %div.col-md-2
+        = link_to 'Cancel', movies_path, :class => 'btn btn-danger'
