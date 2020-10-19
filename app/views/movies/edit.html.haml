@@ -2,14 +2,26 @@
   %h1 Edit Existing Movie
 
   = form_tag movie_path(@movie), :method => :put do
-
-    = label :movie, :title, 'Title'
-    = text_field :movie, 'title'
-
-    = label :movie, :rating, 'Rating'
-    = select :movie, :rating, ['G','PG','PG-13','R','NC-17']
-
-    = label :movie, :release_date, 'Released On'
-    = date_select :movie, :release_date
-
-    = submit_tag 'Update Movie Info'
+    %div.row
+      %div.col-md-4
+        = label :movie, :title, 'Title'
+      %div.col-md-4
+        = text_field :movie, 'title'
+    %div.row
+      %div.col-md-4
+        = label :movie, :rating, 'Rating'
+      %div.col-md-4
+        = select :movie, :rating, ['G','PG','PG-13','R','NC-17']
+    %div.row
+      %div.col-md-4
+        = label :movie, :release_date, 'Released On'
+      %div.col-md-4
+        = date_select :movie, :release_date
+    %div.row
+      %div.col-md-4
+        = label :movie, :description, 'Description'
+      %div.col-md-4
+        = text_area :movie, :description
+    %div.row
+      %div.col
+        = submit_tag 'Update Movie Info'
