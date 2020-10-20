@@ -3,6 +3,7 @@
   %head
     %title RottenPotatoes!
     = stylesheet_link_tag 'application'
+    = javascript_pack_tag 'application'
     = csrf_meta_tags
 
   %body
@@ -10,21 +11,21 @@
       .container-fluid
         %a.navbar-brand{:href => "/"} Rotten Potatoes
         
-        %form_tag{ id: 'search_tmdb_form'}
-          = text_field :search, '', :class => "form-control mr-sm-2"
-          %button.btn.btn-outline-success.my-2.my-sm-0{ type: 'submit' } Search TMDb
-          
         %ul.navbar-nav
           -if session[:user_id] == nil
             -# %li.nav-item
             -#   = link_to 'Sign up with Facebook', '/auth/facebook/callback', :class => "nav-link"
             %li.nav-item
-              = link_to 'Sign in with Facebook', signin_path, :class => "nav-link"
+              = link_to 'Sign in with Facebook', movies_path, :class => "nav-link"
           -else
             %li.nav-item
-            = link_to 'Sign out', signout_path, :class => "nav-link"
+            = link_to 'Sign out', movies_path, :class => "nav-link"
     
     %div{ id: 'search_result' }
+    - if flash[:notice]
+      #notice.message= flash[:notice]
+    - elsif flash[:warning]
+      #warning.message= flash[:warning]
     .wrapper
       = yield
     = javascript_include_tag 'application'
