@@ -39,3 +39,16 @@ ActiveRecord::Schema.define(version: 2020_10_19_203824) do
   end
 
 end
+
+# ActiveRecord::Schema.define(version: 2020_08_21_155130) do
+
+#   create_table "movies", force: :cascade do |t|
+#     t.string "title"
+#     t.string "rating"
+#     t.text "description"
+#     t.datetime "release_date"
+#     t.datetime "created_at", precision: 6, null: false
+#     t.datetime "updated_at", precision: 6, null: false
+#   end
+
+# end
