@@ -18,7 +18,6 @@
           %td= movie.release_date
           %td= link_to "More about #{movie.title}", movie_path(movie), :class => 'btn btn-info'
 
-<<<<<<< HEAD
   %div.row
     %div.col-md-2
       = link_to 'Add new movie', new_movie_path, :class => 'btn btn-primary'
@@ -28,10 +27,3 @@
     %div.col-md-2
       %button.btn.btn-outline-success.my-2.my-sm-0{ type: 'submit' } Search TMDb
             
-=======
-  = link_to 'Add new movie', new_movie_path, :class => 'btn btn-primary'
-
-  %form_tag{ id: 'search_tmdb_form'}
-    = text_field :search, '', :class => "form-control mr-sm-2"
-    %button.btn.btn-outline-success.my-2.my-sm-0{ type: 'submit' } Search TMDb
->>>>>>> 90d34e467652f104d3ea4d1b3d771dd2377d6692
